@@ -37,7 +37,6 @@ class TestDoodadResource:
                         make_doodad(456, name="Test Doodad 2"),
                     ]
                 )
-                .data
             )
             for r in results:
                 assert r in expected
@@ -53,7 +52,6 @@ class TestDoodadResource:
             expected = (
                 DoodadSchema()
                 .dump(Doodad(name=payload["name"], purpose=payload["purpose"]))
-                .data
             )
             assert result == expected
 
@@ -92,6 +90,5 @@ class TestDoodadIdResource:
             expected = (
                 DoodadSchema()
                 .dump(Doodad(doodad_id=123, name="New Doodad", purpose="New purpose"))
-                .data
             )
             assert result == expected

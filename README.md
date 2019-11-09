@@ -19,7 +19,7 @@ source venv/bin/activate
 Next, run
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 to get the dependencies.
@@ -48,7 +48,7 @@ Navigate to the posted URL in your terminal to be greeted with Swagger, where yo
 To run the test suite, simply pip install it and run from the root directory like so
 
 ```
-pip install pytest
+pip3 install pytest
 pytest
 ```
 

@@ -35,7 +35,6 @@ class TestWidgetResource:
                         make_widget(456, name="Test Widget 2"),
                     ]
                 )
-                .data
             )
             for r in results:
                 assert r in expected
@@ -51,7 +50,6 @@ class TestWidgetResource:
             expected = (
                 WidgetSchema()
                 .dump(Widget(name=payload["name"], purpose=payload["purpose"]))
-                .data
             )
             assert result == expected
 
@@ -91,6 +89,5 @@ class TestWidgetIdResource:
             expected = (
                 WidgetSchema()
                 .dump(Widget(widget_id=123, name="New Widget", purpose="New purpose"))
-                .data
             )
             assert result == expected

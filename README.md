@@ -19,7 +19,7 @@ source venv/bin/activate
 Next, run
 
 ```
-pip3 install -r requirements.txt
+make install_requirements
 ```
 
 to get the dependencies.
@@ -27,7 +27,7 @@ to get the dependencies.
 Next, initialize the database
 
 ```
-python manage.py seed_db
+make seed_db
 ```
 
 Type "Y" to accept the message (which is just there to prevent you accidentally deleting things -- it's just a local SQLite database)
@@ -35,20 +35,16 @@ Type "Y" to accept the message (which is just there to prevent you accidentally 
 Finally run the app with
 
 ```
-python wsgi.py
+make wsgi
 ```
 
 Navigate to the posted URL in your terminal to be greeted with Swagger, where you can test out the API.
-
-
-
 
 ## Running tests
 
 To run the test suite, simply pip install it and run from the root directory like so
 
 ```
-pip3 install pytest
-pytest
+make test
 ```
 
